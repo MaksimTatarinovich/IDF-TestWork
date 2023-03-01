@@ -1,21 +1,30 @@
 package UI;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.apache.log4j.Logger;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 
 public class LoginTest {
 
     private static final Logger log = Logger.getLogger(LoginTest.class);
 
-    WebDriver driver;
+    public static WebDriver driver;
+
+    public static Login login;
+    public static Profile profile;
+
 
     /*
     Перед началом сценария запускаем веб-драйвер
@@ -24,18 +33,32 @@ public class LoginTest {
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        login = new Login(driver);
+        profile = new Profile(driver);
+
+        driver.manage().window().maximize();
+
+
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.get("https://demoqa.com/login");
+
+
+
+
+
         log.info("Веб-драйвер запущен!");
 
     }
 
     @Test
-    public void count(){
-        int a = 5;
-        int b = 7;
-        int c = a+b;
-        System.out.println(c);
-        log.info("Тест завершён");
+    public void successLogin(){
+        String name = login.setUserName("MAKSIMKA1");
+        login.setPassword("Makimazmakimaz21!");
+        login.clickLoginButton();
+        Assert.assertEquals(name, profile.userName());
+
     }
 
     /*

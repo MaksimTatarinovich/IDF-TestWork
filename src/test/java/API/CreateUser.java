@@ -43,7 +43,7 @@ public class CreateUser {
             else
                 log.info("Код ответа: " + statusCode + ";" + " Ошибка в создании аккаунта: " + body);
 
-            Assert.assertEquals(statusCode, 201);
+             Assert.assertEquals(statusCode, 201);
         }
     }
 
