@@ -1,0 +1,45 @@
+2023-02-28 22:37:48 INFO  Create_User_API:36 - Аккаунт создан!
+2023-02-28 22:38:24 INFO  Create_User_API:38 - Ошибка в создании аккаунта
+2023-03-01 12:51:30 INFO  Create_User_API:36 - Аккаунт создан!
+2023-03-01 12:52:18 INFO  CreateUser:38 - Аккаунт создан!
+2023-03-01 12:52:54 INFO  CreateUser:40 - Ошибка в создании аккаунта!
+2023-03-01 12:57:16 INFO  CreateUser:41 - Ошибка в создании аккаунта!
+2023-03-01 12:58:17 INFO  CreateUser:41 - Ошибка в создании аккаунта!
+2023-03-01 13:00:52 INFO  CreateUser:41 - Ошибка в создании аккаунта!
+2023-03-01 13:03:45 INFO  CreateUser:44 - Ошибка в создании аккаунта!
+2023-03-01 13:05:47 INFO  CreateUser:42 - Ошибка в создании аккаунта!
+2023-03-01 13:06:33 INFO  CreateUser:40 - Аккаунт создан!
+2023-03-01 13:08:24 INFO  CreateUser:43 - Ошибка в создании аккаунта!
+2023-03-01 13:09:25 INFO  CreateUser:39 - {"userID":"6535936c-e158-4336-b701-09e229495df9","username":"MAKSIMKA","books":[]}
+2023-03-01 13:09:25 INFO  CreateUser:41 - Аккаунт создан!
+2023-03-01 13:09:54 INFO  CreateUser:39 - {"code":"1204","message":"User exists!"}
+2023-03-01 13:09:54 INFO  CreateUser:43 - Ошибка в создании аккаунта!
+2023-03-01 13:10:29 INFO  CreateUser:42 - Ошибка в создании аккаунта!
+2023-03-01 13:10:29 INFO  CreateUser:43 - {"code":"1204","message":"User exists!"}
+2023-03-01 13:11:09 INFO  CreateUser:42 - Ошибка в создании аккаунта!{"code":"1204","message":"User exists!"}
+2023-03-01 13:11:44 INFO  CreateUser:42 - Ошибка в создании аккаунта:{"code":"1204","message":"User exists!"}
+2023-03-01 13:12:44 INFO  CreateUser:42 - statusCode:406Ошибка в создании аккаунта:{"code":"1204","message":"User exists!"}
+2023-03-01 13:13:42 INFO  CreateUser:40 - Код ответа: 201Аккаунт создан:{"userID":"93946136-7e5c-4877-95cf-95edffd51c20","username":"MAKSIMKA","books":[]}
+2023-03-01 13:14:16 INFO  CreateUser:42 - Код ответа: 406Ошибка в создании аккаунта: {"code":"1204","message":"User exists!"}
+2023-03-01 13:14:48 INFO  CreateUser:42 - Код ответа: 406 Ошибка в создании аккаунта: {"code":"1204","message":"User exists!"}
+2023-03-01 13:15:42 INFO  CreateUser:42 - Код ответа: 406  Ошибка в создании аккаунта: {"code":"1204","message":"User exists!"}
+2023-03-01 13:15:49 INFO  CreateUser:42 - Код ответа: 406; Ошибка в создании аккаунта: {"code":"1204","message":"User exists!"}
+2023-03-01 13:16:32 INFO  CreateUser:40 - Код ответа: 201; Аккаунт создан: {"userID":"a87793a6-c996-460d-b689-fe2ee80deb91","username":"MAKSIMKA","books":[]}
+2023-03-01 13:17:17 INFO  CreateUser:42 - Код ответа: 406; Ошибка в создании аккаунта: {"code":"1204","message":"User exists!"}
+2023-03-01 13:35:18 INFO  CreateUser:44 - Код ответа: 400; Ошибка в создании аккаунта: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected token A in JSON at position 0<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at createStrictSyntaxError (/usr/projects/demosite/node_modules/body-parser/lib/types/json.js:158:10)<br> &nbsp; &nbsp;at parse (/usr/projects/demosite/node_modules/body-parser/lib/types/json.js:83:15)<br> &nbsp; &nbsp;at /usr/projects/demosite/node_modules/body-parser/lib/read.js:121:18<br> &nbsp; &nbsp;at invokeCallback (/usr/projects/demosite/node_modules/raw-body/index.js:224:16)<br> &nbsp; &nbsp;at done (/usr/projects/demosite/node_modules/raw-body/index.js:213:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (/usr/projects/demosite/node_modules/raw-body/index.js:273:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (events.js:314:20)<br> &nbsp; &nbsp;at endReadableNT (_stream_readable.js:1241:12)<br> &nbsp; &nbsp;at processTicksAndRejections (internal/process/task_queues.js:84:21)</pre>
+</body>
+</html>
+
+2023-03-01 13:36:51 INFO  CreateUser:42 - Код ответа: 201; Аккаунт создан: {"userID":"ef2bcdb6-d285-4925-b172-20c3e75f8a53","username":"MAKSIMKA","books":[]}
+2023-03-01 13:37:40 INFO  CreateUser:44 - Код ответа: 406; Ошибка в создании аккаунта: {"code":"1204","message":"User exists!"}
+2023-03-01 13:38:42 INFO  CreateUser:42 - Код ответа: 201; Аккаунт создан: {"userID":"d5a2dfa3-592a-49e4-b410-63b7cc13cf64","username":"MAKSIMKA1","books":[]}
+2023-03-01 13:38:50 INFO  CreateUser:44 - Код ответа: 406; Ошибка в создании аккаунта: {"code":"1204","message":"User exists!"}
+2023-03-01 13:39:47 INFO  CreateUser:42 - Код ответа: 201; Аккаунт создан: {"userID":"56002a63-614a-41c7-86ab-456ffc9c1086","username":"MAKSIMKA1","books":[]}
+2023-03-01 13:39:57 INFO  CreateUser:44 - Код ответа: 406; Ошибка в создании аккаунта: {"code":"1204","message":"User exists!"}
