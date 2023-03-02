@@ -8,13 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 public class Profile {
 
     WebDriver driver;
+
     public Profile(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver = driver; }
+        this.driver = driver;
+    }
 
     private final String userNameXPath = "//label[@id='userName-value']";
 
-    public String userName(){
+    public String userName() {
         WebElement userNameValue = driver.findElement(By.xpath(userNameXPath));
         String name = userNameValue.getText();
         return name;

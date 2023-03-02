@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="Testing demoQA Login" annotations="JDK" parallel="tests">
+    <test name="API">
+        <classes>
+            <class name="API.CreateUser"/>
+        </classes>
+    </test>
+
+    <test name="UI">
+        <classes>
+            <class name="UI.LoginTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
