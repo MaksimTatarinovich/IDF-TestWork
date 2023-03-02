@@ -16,8 +16,9 @@ public class CreateUser {
 
         private static final Logger log = Logger.getLogger(CreateUser.class);
 
-
         private String url = "https://demoqa.com/Account/v1/User";
+
+
         //private String first_name = "MAKSIMKA";
         //private String password = "Makimazmakimaz2!1";
 
@@ -25,23 +26,26 @@ public class CreateUser {
         public void successReg() {
 
             //JSONObject requestBody = new JSONObject();
+
+            /*Создание экземпляра класса RegInfo*/
             RegInfo user = new RegInfo("MAKSIMKA1", "Makimazmakimaz21!");
 
             //requestBody.put("userName", name);
             //requestBody.put("password", password);
 
+            /*Отправка запроса + описание его тела*/
             RequestSpecification request = given();
             request.header("Content-Type", "application/json");
             request.body(user);
             Response response = request.post(url);
             String body = response.getBody().asString();
 
-
+            /*Проверка статус кода ответа*/
             int statusCode = response.getStatusCode();
             if(statusCode == 201)
                 log.info("Код ответа: " + statusCode + ";" + " Аккаунт создан: " + body);
             else
-                log.info("Код ответа: " + statusCode + ";" + " Ошибка в создании аккаунта: " + body);
+                log.error("Код ответа: " + statusCode + ";" + " Ошибка в создании аккаунта: " + body);
 
              Assert.assertEquals(statusCode, 201);
         }
