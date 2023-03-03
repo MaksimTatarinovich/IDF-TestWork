@@ -1,19 +1,17 @@
-package UI;
+package PageObjects;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login {
+public class LoginPage {
 
-    private static final Logger log = Logger.getLogger(Login.class);
-
+    private static final Logger log = Logger.getLogger(LoginPage.class);
     WebDriver driver;
 
-    public Login(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
@@ -26,8 +24,6 @@ public class Login {
     private final String InvalidLoginOrPasswordXPath = "//p[@id='name']";
     private final String EmptyUserNameFieldXPath = "//input[contains(@class, 'is-invalid') and @id = 'userName']";
     private final String EmptyPasswordFieldXPath = "//input[contains(@class, 'is-invalid') and @id = 'password']";
-    private final String URL = "https://demoqa.com/login";
-
 
     /*Метод ввода имени юзера в поле для ввода имени*/
     public String setUserName(String userName) {
@@ -40,12 +36,6 @@ public class Login {
     public void setPassword(String password) {
         driver.findElement(By.id(PasswordFieldID)).sendKeys(password);
         //log.info("Пароль введён успешно");
-    }
-
-
-    public String getURL(){
-        log.info("Веб-драйвер запущен");
-        return URL;
     }
 
     /*Метод нажатия на кнопку Login*/
@@ -69,5 +59,4 @@ public class Login {
         log.error("Поле пароля пустое");
         return driver.findElement(By.xpath(EmptyPasswordFieldXPath));
     }
-
 }
