@@ -22,12 +22,4 @@ public class Profile {
         return name;
     }
 
-
-
-   /* public String getUserName(){
-        String userName = userNameValue.getText();
-        return userName;
-    }
-    */
-
 }

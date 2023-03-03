@@ -42,6 +42,7 @@ public class Login {
         //log.info("Пароль введён успешно");
     }
 
+
     public String getURL(){
         log.info("Веб-драйвер запущен");
         return URL;
@@ -57,26 +58,16 @@ public class Login {
     public String invLogOrPass() {
         log.error("Введён неверный логин или пароль. Такого пользователя не существует");
         return driver.findElement(By.xpath(InvalidLoginOrPasswordXPath)).getText();
-
-        //WebElement Inv = driver.findElement(By.xpath(InvalidLoginOrPasswordXPath));
-        //String mess = Inv.getText();
-        //return mess;
     }
 
     public WebElement emptyUserNameField() {
         log.error("Поле имени пользователя пустое");
         return driver.findElement(By.xpath(EmptyUserNameFieldXPath));
-
-        //WebElement emptUsNameField = driver.findElement(By.xpath(EmptyUserNameFieldXPath));
-        //return emptUsNameField;
     }
 
     public WebElement emptyPasswordField() {
         log.error("Поле пароля пустое");
         return driver.findElement(By.xpath(EmptyPasswordFieldXPath));
-
-        //WebElement emptpassField = driver.findElement(By.xpath(EmptyPasswordFieldXPath));
-        //return emptpassField;
     }
 
 }

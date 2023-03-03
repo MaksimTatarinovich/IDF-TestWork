@@ -1,22 +1,18 @@
 package API;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.log4j.Logger;
-import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.Date;
-
 import static io.restassured.RestAssured.given;
 
-public class CreateUser {
+public class CreateUserTest {
 
-    private static final Logger log = Logger.getLogger(CreateUser.class);
+    private static final Logger log = Logger.getLogger(CreateUserTest.class);
 
-    private String url = "https://demoqa.com/Account/v1/User";
+    private final String request_url = "https://demoqa.com/Account/v1/User";
 
 
     //private String first_name = "MAKSIMKA";
@@ -28,7 +24,7 @@ public class CreateUser {
         //JSONObject requestBody = new JSONObject();
 
         /*Создание экземпляра класса RegInfo*/
-        RegInfo user = new RegInfo("MAKSIMKA1", "Makimazmakimaz21!");
+        RegInfo user = new RegInfo("MAKSIMKA1", "PrizivnoiVozrast12!");
 
         //requestBody.put("userName", name);
         //requestBody.put("password", password);
@@ -37,7 +33,7 @@ public class CreateUser {
         RequestSpecification request = given();
         request.header("Content-Type", "application/json");
         request.body(user);
-        Response response = request.post(url);
+        Response response = request.post(request_url);
         String body = response.getBody().asString();
 
         /*Проверка статус кода ответа*/

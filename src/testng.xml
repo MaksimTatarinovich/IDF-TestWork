@@ -3,7 +3,7 @@
 <suite thread-count="1" verbose="1" name="Testing demoQA Login" annotations="JDK" parallel="tests">
     <test name="API">
         <classes>
-            <class name="API.CreateUser"/>
+            <class name="API.CreateUserTest"/>
         </classes>
     </test>
 

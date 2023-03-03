@@ -40,7 +40,7 @@ public class LoginTest {
     @Test(description = "Тест с логинацией существующего юзера")
     public void successLogin() {
         String name = login.setUserName("MAKSIMKA1");
-        login.setPassword("Makimazmakimaz21!");
+        login.setPassword("PrizivnoiVozrast12!");
         login.clickLoginButton();
         Assert.assertEquals(name, profile.userName(), "Успешная логинация");
     }
@@ -56,7 +56,7 @@ public class LoginTest {
     @Test(description = "Тест с логинацией с пустым поле имени юзера")
     public void loginWithEmptyUserNameField() {
         login.setUserName("");
-        login.setPassword("Maksik");
+        login.setPassword("PrizivnoiVozrast12!");
         login.clickLoginButton();
         Assert.assertNotNull(login.emptyUserNameField());
     }
