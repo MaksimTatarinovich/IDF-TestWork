@@ -1,4 +1,4 @@
-package API;
+package Config;
 
 
 public class RegInfo {

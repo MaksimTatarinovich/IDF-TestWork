@@ -9,7 +9,13 @@
 
     <test name="UI">
         <classes>
-            <class name="UI.LoginTest"/>
+            <class name="UI.LoginPageTest"/>
+        </classes>
+    </test>
+
+    <test name="BOOKSTITLE">
+        <classes>
+            <class name="API.BookTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

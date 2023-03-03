@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class BookPage {
-    private final String fldBookTitle = "//span[contains(@id,'see-book')]";
+    private final String fldBookTitleXPath = "//span[contains(@id,'see-book')]";
     WebDriver driver;
 
     public BookPage(WebDriver driver) {
@@ -17,6 +17,6 @@ public class BookPage {
     }
 
     public List<String> getBookTitles() {
-        return driver.findElements(By.xpath(fldBookTitle)).stream().map(value -> value.getText()).collect(Collectors.toList());
+        return driver.findElements(By.xpath(fldBookTitleXPath)).stream().map(value -> value.getText()).collect(Collectors.toList());
     }
 }

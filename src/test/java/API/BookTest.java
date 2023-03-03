@@ -23,7 +23,7 @@ public class BookTest {
         driver.get(Configuration.UI_BOOK_URL);
     }
 
-    @Test(description = "Check books titles using API")
+    @Test(description = "Проверка тайтлов")
     public void getTittleOfBooks() {
         Assert.assertEquals(BooksApiUtil.getListOfBooks(), bookPage.getBookTitles(), "Book titles should be equal");
     }

@@ -31,16 +31,16 @@ public class LoginPageTest {
 
     @Test(description = "Тест с логинацией существующего юзера")
     public void successLoginTest() {
-        String name = loginPage.setUserName("MAKSIMKA1");
-        loginPage.setPassword("PrizivnoiVozrast12!");
+        loginPage.setUserName(Configuration.EXIST_USER_NAME);
+        loginPage.setPassword(Configuration.EXIST_USER_PASSWORD);
         loginPage.clickLoginButton();
-        Assert.assertEquals(name, profile.userName(), "Успешная логинация");
+        Assert.assertEquals(Configuration.EXIST_USER_NAME, profile.userName(), "Успешная логинация");
     }
 
     @Test(description = "Тест с логинацией несуществующего юзера")
     public void userNotExistTest() {
-        loginPage.setUserName("Nikita");
-        loginPage.setPassword("Nikitka1241!");
+        loginPage.setUserName(Configuration.NOT_EXIST_USER_NAME);
+        loginPage.setPassword(Configuration.NOT_EXIST_USER_PASSWORD);
         loginPage.clickLoginButton();
         Assert.assertNotNull(loginPage.invLogOrPass());
     }
@@ -48,14 +48,14 @@ public class LoginPageTest {
     @Test(description = "Тест с логинацией с пустым поле имени юзера")
     public void loginWithEmptyUserNameFieldTest() {
         loginPage.setUserName("");
-        loginPage.setPassword("PrizivnoiVozrast12!");
+        loginPage.setPassword(Configuration.EXIST_USER_PASSWORD);
         loginPage.clickLoginButton();
         Assert.assertNotNull(loginPage.emptyUserNameField());
     }
 
     @Test(description = "Тест с логинацией с пустым полем пароля")
     public void loginWithEmptyPasswordFieldTest() {
-        loginPage.setUserName("MAKSIMKA1");
+        loginPage.setUserName(Configuration.EXIST_USER_NAME);
         loginPage.setPassword("");
         loginPage.clickLoginButton();
         Assert.assertNotNull(loginPage.emptyPasswordField());
