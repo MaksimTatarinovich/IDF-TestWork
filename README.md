@@ -1,5 +1,5 @@
 # IDF-TestWork(AUTOMATION QA)
-Test-Work in IDF Laboratory
+Test-Work in IDF Laboratory AQA
 
 Краткий ввод:
 Комментарии на русском языке - описание метода/cтроки(что она делает, для чего она и т.д.)(старался в такие комментарии запихивать: /**/ )
